@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz .25 Aniversario</title>
+    <style>
+        body {
+            font-family: 'Century Gothic', sans-serif;
+            text-align: center;
+            background-color: #f0f8ff; /* Fondo suave */
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            color: #4b0082; /* Título en morado */
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        h2 {
+            color: #ff4500; /* Subtítulo en naranja */
+            font-size: 2em;
+            margin-top: 20px;
+        }
+        button {
+            background-color: #4b0082; /* Fondo morado */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            margin: 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff4500; /* Cambia a naranja en hover */
+        }
+        .hidden {
+            display: none;
+        }
+        .content {
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Feliz .25 Aniversario</h1>
+    <h2>Elige tu destino ☠️</h2>
+
+    <div id="inicio">
+        <button onclick="mostrarOpciones1()">Opción 1</button>
+        <button onclick="mostrarOpciones2()">Opción 2</button>
+    </div>
+
+    <!-- Opción 1 -->
+    <div id="opciones1" class="hidden">
+        <p class="content">TimeToSayBye:(</p>
+        <button onclick="mostrarResultado('TimeToSayBye:(')">Opción 1</button>
+        <button onclick="mostrarResultado('TimeToSayBye:(')">Opción 2</button>
+    </div>
+
+    <!-- Opción 2 -->
+    <div id="opciones2" class="hidden">
+        <p class="content">TimeToSayBye:(</p>
+        <button onclick="mostrarResultado('TimeToSayBye:(')">Opción 1</button>
+        <button onclick="mostrarResultado('TimeToSayBye:(')">Opción 2</button>
+    </div>
+
+    <!-- Resultados -->
+    <div id="resultado" class="hidden"></div>
+
+    <script>
+        function mostrarOpciones1() {
+            document.getElementById('inicio').classList.add('hidden');
+            document.getElementById('opciones1').classList.remove('hidden');
+        }
+
+        function mostrarOpciones2() {
+            document.getElementById('inicio').classList.add('hidden');
+            document.getElementById('opciones2').classList.remove('hidden');
+        }
+
+        function mostrarResultado(opcion) {
+            let texto = '';
+            if (opcion === 'TimeToSayBye:(') {
+                texto = 'Time to say bye :(';
+            } else if (opcion === 'TimeToSayBye') {
+                texto = 'Time to say bye :(';
+            } else if (opcion === 'TimeToSayBye') {
+                texto = 'Time to say bye :(';
+            }
+            document.getElementById('opciones1').classList.add('hidden');
+            document.getElementById('opciones2').classList.add('hidden');
+            document.getElementById('resultado').classList.remove('hidden');
+            document.getElementById('resultado').innerHTML = `<p class="content">${texto}</p>`;
+        }
+    </script>
+</body>
+</html>
